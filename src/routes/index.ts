@@ -1,8 +1,10 @@
 import { Router } from "express";
-import { messageRoutes } from "./message";
+import { messagesRoutes } from "./messages";
+import { utilsRoutes } from "./utils";
 
 const router = Router();
 
-router.use("/messages", messageRoutes);
+router.use("/messages", messagesRoutes);
+router.use("/utils", utilsRoutes);
 
 export { router as routes };

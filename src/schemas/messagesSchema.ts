@@ -7,3 +7,9 @@ export const sendMessageSchema = Joi.object({
   c: Joi.string().required(),
   m: Joi.string().required(),
 });
+
+export const retrieveMessageSchema = Joi.object({
+  t: Joi.number().required(),
+  s: Joi.string().required(),
+  e: Joi.number(),
+});

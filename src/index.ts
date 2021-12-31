@@ -1,8 +1,7 @@
 import { routes } from "./routes";
 import express from "express";
 import { Database } from "./services/Database";
-
-const PORT = 3001;
+import env from "./env";
 
 async function main() {
   console.log("🔒 Confidence server is starting...");
@@ -15,8 +14,8 @@ async function main() {
 
   app.use(routes);
 
-  app.listen(PORT, () =>
-    console.log(`✨ Confidence is running in port ${PORT}`)
+  app.listen(env.PORT, () =>
+    console.log(`✨ Confidence is running in port ${env.PORT}`)
   );
 }
 

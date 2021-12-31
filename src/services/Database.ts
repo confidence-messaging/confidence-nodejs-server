@@ -7,6 +7,7 @@ export class Database {
     this.sequelize = new Sequelize({
       models: [__dirname + "/../models"],
       dialect: "sqlite",
+      storage: "database.sqlite",
       host: process.env.DB_HOST,
       username: process.env.DB_USER,
       password: process.env.DB_PASS,
